@@ -16,4 +16,11 @@ public class Task {
     public String toString() {
         return id + ". " + title + " [" + (isCompleted ? "Done" : "Pending") + "]";
     }
+    public void updateTask(int id, String newTitle) {
+    for (Task t : tasks) {
+        if (t.id == id) {
+            t.title = newTitle;
+        }
+    }
+}
 }
